@@ -5,7 +5,6 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { Button } from "./ui/button";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
