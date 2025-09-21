@@ -1,0 +1,32 @@
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { BsArrowUpRight } from "react-icons/bs";
+
+const Hero = () => {
+  return (
+    <main className="px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex min-h-[70vh] flex-col justify-center gap-4 px-4 sticky top-16">
+        <p className="font-satoshi text-xl font-bold text-gray-800 uppercase sm:text-2xl md:text-3xl">
+          More than a Court, It&apos;s a Culture
+        </p>
+        <p className="font-clash-display text-5xl font-semibold tracking-tight sm:text-6xl md:text-8xl/22 lg:text-9xl/28">
+          COURT CULTURE
+        </p>
+        <p className="font-satoshi text-lg text-gray-700 uppercase sm:text-xl md:text-2xl">
+          Sports & Recreation Facilities
+        </p>
+
+        <div className="mt-8 flex">
+          <Button variant="outline" size="lg">
+            Let&apos;s Talk <BsArrowUpRight className="ml-2" />
+          </Button>
+        </div>
+      </div>
+      <div className="relative h-[50vh] w-full lg:h-[80vh]">
+        <Image src="/1.jpg" alt="Hero" fill className="object-cover" priority />
+      </div>
+    </main>
+  );
+};
+
+export default Hero;
