@@ -17,7 +17,7 @@ const FocusItem: React.FC<FocusItemProps> = ({
     <div className="mb-8 grid grid-cols-1 gap-8 border-b border-[#141414]/60 pb-8 md:grid-cols-2">
       <div className="space-y-4 md:space-y-8 sm:mr-4 md:mr-12 lg:mr-36">
         <h3>{title}</h3>
-        <div className="space-y-4">
+        <div className="space-y-2">
           {descriptions.map((desc, index) => (
             <p key={index} className="copy">
               {desc}

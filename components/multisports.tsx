@@ -17,7 +17,7 @@ const courtBased = [
 const specialtyAndEmerging = ["Esports arenas", "Golf simulators"];
 
 const trainingAndPerformance = [
-  "Recovery & wellness (ice baths, saunas, recovery tech)",
+  "Recovery & Wellness (ice baths, saunas, recovery tech)",
   "Slim rooms Tech",
 ];
 
