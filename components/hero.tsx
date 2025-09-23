@@ -12,8 +12,8 @@ const Hero = () => {
         <p className="font-clash-display text-5xl font-semibold tracking-tight sm:text-6xl md:text-8xl/22 lg:text-9xl/28">
           COURT CULTURE
         </p>
-        <p className="font-satoshi text-lg text-gray-700 uppercase sm:text-xl md:text-2xl">
-          Sports & Recreation Facilities
+        <p className="font-satoshi text-lg text-gray-700 md:text-xl max-w-prose">
+          We design, build, and operate Sports & Recreation Facilities that transform underused spaces into vibrant destinations for sport, wellness, and community connection.
         </p>
 
         <div className="mt-8 flex">

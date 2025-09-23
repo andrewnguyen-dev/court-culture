@@ -37,7 +37,7 @@ const NavBar = () => {
         duration: 0.6,
         ease: "power2.out",
         stagger: 0.1,
-        delay: 0.2, // Start after menu slides in
+        delay: 0, // Start after menu slides in
       });
     } else {
       // Reverse staggered animation for menu items sliding down (reverse order)
@@ -76,7 +76,7 @@ const NavBar = () => {
     setIsMenuOpen(false);
   };
 
-  const menuItems = ["Mission", "Focus Area", "Team", "Multisport"];
+  const menuItems = ["Mission", "Focus Area", "About Us", "Multisport"];
 
   return (
     <>
@@ -122,7 +122,7 @@ const NavBar = () => {
           <div className="flex items-center justify-end px-6 py-4">
             <button
               onClick={closeMenu}
-              className="cursor-pointer p-2 text-gray-600 hover:text-gray-900"
+              className="cursor-pointer p-2 text-gray-600 hover:text-gray-900 hover:rotate-180 transition-transform duration-300"
               aria-label="Close menu"
             >
               <RxCross1 className="h-5 w-5" />
@@ -139,7 +139,7 @@ const NavBar = () => {
                       if (el) menuItemsRef.current[index] = el;
                     }}
                     href={`#${item.toLowerCase().replace(" ", "-")}`}
-                    className="block rounded-md px-4 text-2xl font-medium text-gray-700 transition-colors duration-200 hover:text-gray-900 sm:text-3xl"
+                    className="block hover:pl-6 transition-all duration-300 rounded-md px-4 text-2xl font-medium text-gray-700 hover:text-[#141414] sm:text-3xl"
                     onClick={closeMenu}
                   >
                     {item}

@@ -3,7 +3,7 @@ import React from "react";
 
 const Mission = () => {
   return (
-    <section className="mt-24" id="mission">
+    <section className="pt-24" id="mission">
       <h1>Mission</h1>
       <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2">
         <h3 className="sm:mr-16 md:mr-24 lg:mr-48">Turning Spaces into Places for Sport, Wellness & Connection</h3>

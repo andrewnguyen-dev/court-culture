@@ -14,8 +14,8 @@ const FocusItem: React.FC<FocusItemProps> = ({
   imageSrc,
 }) => {
   return (
-    <div className="mb-8 grid grid-cols-1 gap-8 border-b border-[#141414]/50 pb-8 md:grid-cols-2">
-      <div className="space-y-8 sm:mr-4 md:mr-12 lg:mr-36">
+    <div className="mb-8 grid grid-cols-1 gap-8 border-b border-[#141414]/60 pb-8 md:grid-cols-2">
+      <div className="space-y-4 md:space-y-8 sm:mr-4 md:mr-12 lg:mr-36">
         <h3>{title}</h3>
         <div className="space-y-4">
           {descriptions.map((desc, index) => (
@@ -35,7 +35,7 @@ const FocusItem: React.FC<FocusItemProps> = ({
 // TODO: Add Stack effect to FocusItem
 const FocusArea = () => {
   return (
-    <section className="mt-24" id="focus-area">
+    <section className="pt-24" id="focus-area">
       <h1>Focus Area</h1>
       <p className="copy -mt-8 mb-20 md:-mt-16">
         Backing the founders who are daring to reshape sport.
@@ -68,6 +68,9 @@ const FocusArea = () => {
         ]}
         imageSrc="/4.jpg"
       />
+      <div className="relative aspect-video w-full md:col-span-2">
+        <Image src="/3.jpg" alt="Mission" fill className="object-cover" />
+      </div>
     </section>
   );
 };

@@ -1,6 +1,8 @@
+import AboutUs from "@/components/about-us";
 import FocusArea from "@/components/focus-area";
 import Hero from "@/components/hero";
 import Mission from "@/components/misson";
+import Multisports from "@/components/multisports";
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
       <Hero />
       <Mission />
       <FocusArea />
+      <AboutUs />
+      <Multisports /> 
     </div>
   );
 }
