@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 
@@ -15,7 +15,7 @@ const FocusItem: React.FC<FocusItemProps> = ({
 }) => {
   return (
     <div className="mb-8 grid grid-cols-1 gap-8 border-b border-[#141414]/60 pb-8 md:grid-cols-2">
-      <div className="space-y-4 md:space-y-8 sm:mr-4 md:mr-12 lg:mr-36">
+      <div className="space-y-4 sm:mr-4 md:mr-12 md:space-y-8 lg:mr-36">
         <h3>{title}</h3>
         <div className="space-y-2">
           {descriptions.map((desc, index) => (
@@ -65,6 +65,13 @@ const FocusArea = () => {
         title="M-V-P! M-V-P!"
         descriptions={[
           "Pop-Up & Modular Sports Activations - Driving Community Engagement and Participation",
+        ]}
+        imageSrc="/4.jpg"
+      />
+      <FocusItem
+        title="Padel on the Water"
+        descriptions={[
+          "Padel on the Water is where sport meets spectacle — a bold statement that elevates our reputation as a global lifestyle and sporting destination.",
         ]}
         imageSrc="/4.jpg"
       />
