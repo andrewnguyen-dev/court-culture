@@ -48,21 +48,22 @@ h4 {
 }
 
 /* Marquee / Tape keyframes and helper classes */
+/* Use translate3d for better GPU acceleration and smoother animation */
 @keyframes move-left {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-10%, 0, 0);
   }
 }
 
 @keyframes move-right {
   from {
-    transform: translateX(-50%);
+    transform: translate3d(-10%, 0, 0);
   }
   to {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 

@@ -57,7 +57,7 @@ const Mission = () => {
           </div>
 
           {/* diagonal tape */}
-          <div className="absolute -left-8 -right-8 top-[15%] flex justify-end px-6">
+          <div className="absolute -left-8 -right-8 top-[18%] flex justify-end px-6">
             <div className="w-full max-w-none flex justify-end">
               <Tape
                 items={["Setting the Standard—Endorsed by the Best in Sport"]}

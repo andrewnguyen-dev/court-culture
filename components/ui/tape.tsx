@@ -39,12 +39,7 @@ const Tape: React.FC<TapeProps> = ({
     // animation is constructed using global keyframes added to globals.css
     animation: `${animationName} ${speed}s linear infinite`,
     animationPlayState: paused ? "paused" : "running",
-  };
-
-  const maskStyle: React.CSSProperties = {
-    WebkitMaskImage:
-      "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
-    maskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
+    willChange: "transform", // GPU acceleration hint
   };
 
   return (
@@ -54,11 +49,11 @@ const Tape: React.FC<TapeProps> = ({
       onMouseLeave={() => pauseOnHover && setPaused(false)}
       style={containerStyle}
     >
-      <div className="-mx-1 inline-block" style={maskStyle}>
-        {/* Duplicate the list twice to create a continuous loop */}
+      <div className="-mx-1">
+        {/* Duplicate the list many times to ensure continuous seamless loop */}
         <div className="flex flex-nowrap" style={{ width: "max-content" }}>
           <div style={scrollerStyle} aria-hidden>
-            {[...new Array(2)].map((_, groupIndex) => (
+            {[...new Array(10)].map((_, groupIndex) => (
               <React.Fragment key={groupIndex}>
                 {items.map((word, idx) => (
                   <div
