@@ -81,7 +81,7 @@ const NavBar = () => {
   return (
     <>
       {/* Main Navigation Bar */}
-      <nav className="font-satoshi fixed top-0 right-4 left-4 z-40 border-b bg-[#f2f2f2] border-[#141414] sm:right-6 sm:left-6 lg:right-8 lg:left-8">
+      <nav className="font-satoshi fixed top-0 right-4 left-4 z-40 border-b bg-[#f2f2f2] border-[#141414] sm:right-8 sm:left-8 lg:right-12 lg:left-12">
         <div className="">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}

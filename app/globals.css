@@ -46,3 +46,36 @@ h4 {
 .copy {
   @apply space-y-4 text-lg;
 }
+
+/* Marquee / Tape keyframes and helper classes */
+@keyframes move-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes move-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Utility to ensure the animated element preserves its 3D transforms */
+.tape-3d {
+  transform-style: preserve-3d;
+}
+
+/* Small helper to visually hide elements from assistive tech when duplicated for animation */
+.tape-aria-hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

@@ -6,7 +6,7 @@ import Multisports from "@/components/multisports";
 
 export default function Home() {
   return (
-    <div className="font-satoshi px-4 sm:px-6 lg:px-8">
+    <div className="font-satoshi px-4 sm:px-8 lg:px-12">
       <Hero />
       <Mission />
       <FocusArea />
