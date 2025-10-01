@@ -1,6 +1,6 @@
-import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
+import { Globe } from "./ui/globe";
 import { BsArrowUpRight } from "react-icons/bs";
 
 const AboutUsItem = ({
@@ -35,8 +35,8 @@ const AboutUs = () => {
             description="Tailored multisport destinations for emerging and specialist sports like pickleball, badminton, and volleyball."
           />
         </div>
-        <div className="relative aspect-video w-full">
-          <Image src="/3.jpg" alt="Mission" fill className="object-cover" />
+        <div className="relative aspect-square w-full">
+          <Globe />
         </div>
       </div>
       <div className="mb-32">
