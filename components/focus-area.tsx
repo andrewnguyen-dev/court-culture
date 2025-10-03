@@ -51,7 +51,7 @@ const FocusArea = () => {
           "We position ourselves as the recreational partner of choice for property owners, funds, and developers.",
           "Our role is to transform under utilised or strategic spaces into thriving destinations for sport, wellness, and community.",
         ]}
-        imageSrc="/4.jpg"
+        imageSrc="/7.jpg"
       />
       <FocusItem
         title="International Licensing"
@@ -59,21 +59,21 @@ const FocusArea = () => {
           "Court Culture offers international licensing opportunities, allowing partners worldwide to bring our expertise in designing, activating, and operating multi-sport and wellness destinations to their local communities.",
           "Licensees gain access to our brand, operational systems, and strategic support to create thriving recreational hubs.",
         ]}
-        imageSrc="/4.jpg"
+        imageSrc="/8.jpg"
       />
       <FocusItem
         title="M-V-P! M-V-P!"
         descriptions={[
           "Pop-Up & Modular Sports Activations - Driving Community Engagement and Participation",
         ]}
-        imageSrc="/4.jpg"
+        imageSrc="/9.jpg"
       />
       <FocusItem
         title="Padel on the Water"
         descriptions={[
           "Padel on the Water is where sport meets spectacle — a bold statement that elevates our reputation as a global lifestyle and sporting destination.",
         ]}
-        imageSrc="/4.jpg"
+        imageSrc="/10.png"
       />
       <div className="relative aspect-video w-full md:col-span-2">
         <Image src="/6.jpg" alt="Mission" fill className="object-cover" />
