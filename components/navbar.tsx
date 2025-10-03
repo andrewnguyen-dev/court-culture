@@ -88,7 +88,7 @@ const NavBar = () => {
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center gap-3">
               <Image src="/logo.png" alt="Logo" width={40} height={40} />
-              <div className="text-xl font-clash-display text-gray-900 uppercase">
+              <div className="text-xl font-medium font-clash-display text-gray-900 uppercase">
                 Court Culture
               </div>
             </div>
