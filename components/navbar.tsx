@@ -5,6 +5,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Image from "next/image";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -85,7 +86,8 @@ const NavBar = () => {
         <div className="">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 flex items-center gap-3">
+              <Image src="/logo.png" alt="Logo" width={40} height={40} />
               <div className="text-xl font-clash-display text-gray-900 uppercase">
                 Court Culture
               </div>

@@ -43,7 +43,7 @@ const FocusArea = () => {
       <FocusItem
         title="Venues"
         descriptions={["Coming Soon"]}
-        imageSrc="/4.jpg"
+        imageSrc="/5.jpg"
       />
       <FocusItem
         title="Recreational Partner"
@@ -76,7 +76,7 @@ const FocusArea = () => {
         imageSrc="/4.jpg"
       />
       <div className="relative aspect-video w-full md:col-span-2">
-        <Image src="/3.jpg" alt="Mission" fill className="object-cover" />
+        <Image src="/6.jpg" alt="Mission" fill className="object-cover" />
       </div>
     </section>
   );
