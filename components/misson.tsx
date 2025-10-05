@@ -2,6 +2,75 @@ import Image from "next/image";
 import React from "react";
 import Tape from "./ui/tape";
 
+export type StatItem = {
+  value: string;
+  label: string;
+};
+
+export const StatsCard: React.FC<{
+  title: string;
+  items: StatItem[];
+  className?: string;
+}> = ({ title, items, className = "" }) => {
+  return (
+    <div className={`rounded-lg bg-neutral-100 p-6 border border-neutral-200 ${className}`}>
+      <div className="mb-2">
+        <h5 className="font-semibold text-neutral-600 uppercase tracking-wide mb-5">{title}</h5>
+        <div className="space-y-5">
+          {items.map((it, idx) => (
+            <div key={idx}>
+              <p className="text-5xl font-bold text-[#141414]/90 mb-1">{it.value}</p>
+              <p className="text-neutral-700">{it.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const statsData: { title: string; items: StatItem[] }[] = [
+  {
+    title: "Basketball Infrastructure",
+    items: [
+      { value: "304", label: "Basketball clubs & associations across Australia & New Zealand" },
+      { value: "1.35M", label: "Active basketball participants (≈ 5% of Australians)" },
+    ],
+  },
+  {
+    title: "Demand & Capacity Challenges",
+    items: [
+      { value: "1,000+", label: "Player waiting lists at some associations" },
+      { value: "9-10", label: "Players per team due to court shortages (only 5 play at a time)" },
+    ],
+  },
+  {
+    title: "Regional Distribution",
+    items: [
+      { value: "3", label: "States (VIC, NSW, QLD) host the largest participation base" },
+      { value: "50%", label: "Of associations prefer multi-court venues for cost, safety & management efficiency" },
+    ],
+  },
+  {
+    title: "Growth Trends",
+    items: [
+      { value: "↑300%", label: "Pickleball participation over the past 5 years — one of the world's fastest-growing sports" },
+    ],
+  },
+  {
+    title: "Future Outlook",
+    items: [
+      { value: "↑20%", label: "Population increase by 2040 → major pressure on sport & recreation infrastructure" },
+    ],
+  },
+  {
+    title: "Multi-Sport Impact",
+    items: [
+      { value: "↑60%", label: "Community use increase at multi-sport sites year-round" },
+    ],
+  },
+];
+
 const Mission = () => {
   return (
     <section className="pt-24" id="mission">
@@ -13,7 +82,7 @@ const Mission = () => {
             To create vibrant recreational destinations that bring people
             together through sport, wellness, and community. We design, build,
             and operate spaces that transform developments into thriving hubs of
-            activity, driving engagement, foot traffic, and long-term value
+            activity, driving engagement, foot traffic, and long-term value.
           </p>
           <p>
             The shortage of facilities around Australia ie; basketball,
@@ -21,6 +90,17 @@ const Mission = () => {
           </p>
         </div>
       </div>
+
+      {/* Stats Section */}
+      <div className="mb-16">
+        {/* Stats Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          {statsData.map((card) => (
+            <StatsCard key={card.title} title={card.title} items={card.items} />
+          ))}
+        </div>
+      </div>
+
       {/* 2 cards */}
 
 
