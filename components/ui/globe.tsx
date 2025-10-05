@@ -99,7 +99,7 @@ export function Globe({ className, config = GLOBE_CONFIG }: { className?: string
   }, [rs, config]);
 
   return (
-    <div className={cn("absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]", className)}>
+    <div className={cn("mx-auto aspect-[1/1] w-full max-w-[500px]", className)}>
       <canvas
         className={cn(
           "size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"

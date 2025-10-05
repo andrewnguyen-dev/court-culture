@@ -77,7 +77,7 @@ const NavBar = () => {
     setIsMenuOpen(false);
   };
 
-  const menuItems = ["Mission", "Focus Area", "About Us", "Multisport"];
+  const menuItems = ["Mission", "Focus Area", "About Us", "Multisports"];
 
   return (
     <>
