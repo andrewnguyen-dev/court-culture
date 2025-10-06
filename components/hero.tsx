@@ -21,7 +21,7 @@ const Hero = () => {
         <div className="mt-8 flex">
           <Button variant="outline" size="lg" asChild>
             <Link
-              href="https://wa.me/+61434770307"
+              href="https://api.whatsapp.com/send?phone=61434770307"
               className="flex items-center"
               target="_blank"
               rel="noopener noreferrer"
