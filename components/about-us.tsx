@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Globe } from "./ui/globe";
 import { BsArrowUpRight } from "react-icons/bs";
 import Image from "next/image";
+import Link from "next/link";
 
 const AboutUsItem = ({
   title,
@@ -60,10 +61,13 @@ const AboutUs = () => {
           <Globe />
         </div>
       </div>
-      <div className="mb-32 grid grid-cols-2 gap-4 lg:gap-8 sm lg:grid-cols-4">
+      <div className="sm mb-32 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-8">
         <div>
           <h4 className="col-span-1 mb-3 tracking-tight">The team</h4>
-          <p className="sm:text-lg">Our experienced and successful Management team that covers all bases!</p>
+          <p className="sm:text-lg">
+            Our experienced and successful Management team that covers all
+            bases!
+          </p>
         </div>
         <TeamMember name="Christopher Heverin" src="/team-3.jpg" />
         <TeamMember name="Andrew Blake" src="/team-1.jpg" />
@@ -74,8 +78,15 @@ const AboutUs = () => {
           Let&apos;s begin this adventure, together.
         </p>
         <div className="mt-4 flex">
-          <Button variant="outline" size="lg">
-            Connect <BsArrowUpRight className="ml-2" />
+          <Button variant="outline" size="lg" asChild>
+            <Link
+              href="https://wa.me/+61434770307"
+              className="flex items-center"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Connect <BsArrowUpRight className="ml-2" />
+            </Link>
           </Button>
         </div>
       </div>

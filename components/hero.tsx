@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { BsArrowUpRight } from "react-icons/bs";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -19,15 +19,19 @@ const Hero = () => {
         </p>
 
         <div className="mt-8 flex">
-          <Button variant="outline" size="lg">
-            Let&apos;s Talk <BsArrowUpRight className="ml-2" />
+          <Button variant="outline" size="lg" asChild>
+            <Link
+              href="https://wa.me/+61434770307"
+              className="flex items-center"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Let&apos;s Talk <BsArrowUpRight className="ml-2" />
+            </Link>
           </Button>
         </div>
       </div>
-      {/* <div className="relative h-[50vh] w-full lg:h-[80vh]">
-        <Image src="/1.jpg" alt="Hero" fill className="object-cover" priority />
-      </div> */}
-      <div className="relative h-[60vh] w-full lg:h-[80vh] aspect-video overflow-hidden">
+      <div className="relative aspect-video h-[60vh] w-full overflow-hidden lg:h-[80vh]">
         <video
           autoPlay
           loop
@@ -35,7 +39,10 @@ const Hero = () => {
           playsInline
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source src="/Cinematic_Basketball_Spin_Video.webm" type="video/webm" />
+          <source
+            src="/Cinematic_Basketball_Spin_Video.webm"
+            type="video/webm"
+          />
           <source src="/Cinematic_Basketball_Spin_Video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
