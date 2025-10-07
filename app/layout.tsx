@@ -12,9 +12,8 @@ const faviconIco = new URL("./favicon.ico", import.meta.url).toString();
 const appleIcon = new URL("./apple-icon.png", import.meta.url).toString();
 const appManifest = new URL("./manifest.json", import.meta.url).toString();
 
-// Images saved to `public` can be referenced via absolute paths
-const webManifest192 = "/web-app-manifest-192x192.png";
-const webManifest512 = "/web-app-manifest-512x512.png";
+const primaryDomain = "https://www.courtculture.com.au";
+const secondaryDomain = "https://www.courtculture.au";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -52,8 +51,66 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Court Culture",
+  metadataBase: new URL(primaryDomain),
+  title: {
+    default: "Court Culture",
+    template: "%s | Court Culture",
+  },
   description: "We design, build, and operate Sports & Recreation Facilities that transform underused spaces into vibrant destinations for sport, wellness, and community connection.",
+  keywords: [
+    "sports facility design",
+    "sports facility construction",
+    "recreation facility operations",
+    "community wellness spaces",
+    "sport venue management",
+  ],
+  category: "sports",
+  alternates: {
+    canonical: "/",
+    languages: {
+      "x-default": primaryDomain,
+      "en-AU": secondaryDomain,
+    },
+  },
+  openGraph: {
+    type: "website",
+    url: primaryDomain,
+    title: "Court Culture",
+    description: "We design, build, and operate Sports & Recreation Facilities that transform underused spaces into vibrant destinations for sport, wellness, and community connection.",
+    siteName: "Court Culture",
+    locale: "en_AU",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1182,
+        height: 1182,
+        alt: "Court Culture logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Court Culture",
+    description: "We design, build, and operate Sports & Recreation Facilities that transform underused spaces into vibrant destinations for sport, wellness, and community connection.",
+    images: ["/logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  manifest: appManifest,
+  icons: {
+    icon: [
+      { url: iconSvg, type: "image/svg+xml" },
+      { url: iconPng, type: "image/png", sizes: "32x32" },
+      { url: faviconIco },
+    ],
+    apple: [{ url: appleIcon }],
+  },
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
@@ -62,19 +119,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en antialiased">
-      {/* Head tags so browsers can find the various favicons and the manifest */}
-      <head>
-        <link rel="apple-touch-icon" sizes="180x180" href={appleIcon} />
-        <link rel="icon" type="image/svg+xml" href={iconSvg} />
-        <link rel="icon" type="image/png" sizes="32x32" href={iconPng} />
-        <link rel="shortcut icon" href={faviconIco} />
-        <link rel="manifest" href={appManifest} />
-        {/* Optional webmanifest preview images from public */}
-        <meta name="theme-color" content="#ffffff" />
-        <link rel="preload" href={webManifest192} as="image" />
-        <link rel="preload" href={webManifest512} as="image" />
-      </head>
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${clashDisplay.variable} ${satoshi.variable} antialiased`}
       >
