@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.courtculture.com.au
+
+# Sitemaps
+Sitemap: https://www.courtculture.com.au/sitemap.xml
