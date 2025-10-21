@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { Analytics } from '@vercel/analytics/next';
 
 // Add URLs for favicon files stored in the `app` directory
 const iconSvg = new URL("./icon0.svg", import.meta.url).toString();
@@ -126,6 +127,7 @@ export default function RootLayout({
         <NavBar />
         <main className="pt-16">
           {children}
+          <Analytics />
         </main>
         <Footer />
       </body>
