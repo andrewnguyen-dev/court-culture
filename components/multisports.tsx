@@ -11,7 +11,7 @@ const courtBased = [
   "Pickleball",
   "Badminton",
   "Table tennis",
-  "Paddle tennis",
+  "Padel tennis",
 ];
 
 const specialtyAndEmerging = ["Esports arenas", "Golf simulators"];
