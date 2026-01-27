@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Button } from "@/components/ui/button";
+import ContactSection from "@/components/contact-section";
 
 export const metadata: Metadata = {
   title: "Padel Culture | Dedicated to the World's Fastest-Growing Sport",
@@ -58,7 +59,7 @@ export default function PadelCulturePage() {
               <div className="space-y-6 text-lg text-neutral-700">
                 <p>
                   Padel Culture manages the full setup and day-to-day
-                  operations, so you don’t have to. We deliver a fully
+                  operations, so you don't have to. We deliver a fully
                   operational padel venue — allowing you to focus on people,
                   growth, and building a thriving local padel community.
                 </p>
@@ -163,7 +164,7 @@ export default function PadelCulturePage() {
             </h2>
             <p className="max-w-3xl text-xl text-neutral-600">
               Through integrated solutions spanning court construction,
-              equipment, tournaments, and community engagement, we’re helping
+              equipment, tournaments, and community engagement, we're helping
               drive the worldwide growth of padel.
             </p>
           </div>
@@ -267,6 +268,7 @@ export default function PadelCulturePage() {
           </div>
         </section>
       </div>
+      <ContactSection />
     </div>
   );
 }

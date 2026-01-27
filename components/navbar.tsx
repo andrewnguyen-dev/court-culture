@@ -77,7 +77,14 @@ const NavBar = () => {
     setIsMenuOpen(false);
   };
 
-  const menuItems = ["Mission", "Focus Area", "About Us", "Multisports"];
+  const menuItems = [
+    { name: "Home", href: "/" },
+    { name: "Mission", href: "/#mission" },
+    { name: "Focus Area", href: "/#focus-area" },
+    { name: "About Us", href: "/#about-us" },
+    { name: "Multisports", href: "/#multisports" },
+    { name: "Padel Culture", href: "/padel-culture" },
+  ];
 
   return (
     <>
@@ -140,11 +147,11 @@ const NavBar = () => {
                     ref={(el) => {
                       if (el) menuItemsRef.current[index] = el;
                     }}
-                    href={`#${item.toLowerCase().replace(" ", "-")}`}
+                    href={item.href}
                     className="block hover:pl-6 transition-all duration-300 rounded-md px-4 text-2xl font-medium text-gray-700 hover:text-[#141414] sm:text-3xl"
                     onClick={closeMenu}
                   >
-                    {item}
+                    {item.name}
                   </a>
                 </div>
               ))}

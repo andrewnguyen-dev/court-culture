@@ -2,7 +2,7 @@
 
 Padel Culture is part of the Court Culture group, operating as a dedicated subsidiary focused on padel.
 
-Padel Culture manages the full setup and day-to-day operations, so you don’t have to. We take care of:
+Padel Culture manages the full setup and day-to-day operations, so you don't have to. We take care of:
 
 - Site selection and commercial agreements
 - All design components and commercial elenents
@@ -17,10 +17,10 @@ We deliver a fully operational padel venue — allowing you to focus on people, 
 Our core model centers on partnerships tailored to clubs, businesses, and organizations of all sizes. . Courts are installed under a fully financed lease and
 revenue-share structure, creating a low-risk, high-impact opportunity for our partners.
 
-We’re more than a padel company. We’re a global community and a growing platform for everyone passionate about the sport. Our mission is to make padel
+We're more than a padel company. We're a global community and a growing platform for everyone passionate about the sport. Our mission is to make padel
 more accessible, more connected, and more engaging — everywhere.
 
-Through integrated solutions spanning court construction, equipment, tournaments, and community engagement, we’re helping drive the worldwide growth
+Through integrated solutions spanning court construction, equipment, tournaments, and community engagement, we're helping drive the worldwide growth
 of padel.
 
 None of this would be possible without the commitment, professionalism and partnership of the world's leading supplier of all things Padel: Acenta Group.
@@ -30,7 +30,7 @@ Zraland & Oceania.
 MEDIA RELEASE: https://acenta.group/2026/01/26/acenta-group-establishes-exclusive-partnership-agent-platform-in-australia-new-zealand-and-oceania/
 
 ## Courts (link to https://teamacenta.com/courts/)
-We’re building the foundation for a global padel
+We're building the foundation for a global padel
 community. With years of experience, our team
 delivers high-quality padel courts tailored to clubs,
 businesses, and organizations of all sizes. As part of a

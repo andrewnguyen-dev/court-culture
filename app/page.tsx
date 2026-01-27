@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AboutUs from "@/components/about-us";
+import ContactSection from "@/components/contact-section";
 import FocusArea from "@/components/focus-area";
 import Hero from "@/components/hero";
 import Mission from "@/components/misson";
@@ -20,6 +21,7 @@ export default function Home() {
       <FocusArea />
       <AboutUs />
       <Multisports /> 
+      <ContactSection />
     </div>
   );
 }
