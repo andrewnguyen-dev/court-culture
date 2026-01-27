@@ -6,6 +6,7 @@ import { RxCross1 } from "react-icons/rx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
+import Link from "next/link";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -89,16 +90,18 @@ const NavBar = () => {
   return (
     <>
       {/* Main Navigation Bar */}
-      <nav className="font-satoshi fixed top-0 right-4 left-4 z-40 border-b bg-[#f2f2f2] border-[#141414] sm:right-8 sm:left-8 lg:right-12 lg:left-12">
+      <nav className="font-satoshi fixed top-0 left-0 w-full z-40 border-b bg-[#f2f2f2] border-[#141414] px-4 sm:px-8 lg:px-12">
         <div className="">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
-            <div className="flex-shrink-0 flex items-center gap-3">
-              <Image src="/logo.png" alt="Logo" width={40} height={40} />
-              <div className="text-xl font-medium font-clash-display text-gray-900 uppercase">
-                Court Culture
+            <Link href="/">
+              <div className="flex-shrink-0 flex items-center gap-3">
+                <Image src="/logo.png" alt="Logo" width={40} height={40} />
+                <div className="text-xl font-medium font-clash-display text-gray-900 uppercase">
+                  Court Culture
+                </div>
               </div>
-            </div>
+            </Link>
 
             {/* Hamburger Menu Button */}
             <button

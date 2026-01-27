@@ -8,7 +8,7 @@ const PadelCulture = () => {
     <div className="group relative aspect-video w-full overflow-hidden rounded-lg md:col-span-2">
       {/* Using Padel on the water image as a background context */}
       <Image
-        src="/10.png"
+        src="/padel-culture-01.jpg"
         alt="Padel Culture"
         fill
         className="object-cover transition-transform duration-700 group-hover:scale-105"

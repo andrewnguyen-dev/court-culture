@@ -27,7 +27,7 @@ export default function PadelCulturePage() {
       {/* Hero Section */}
       <section className="relative h-[80vh] w-full overflow-hidden bg-black">
         <Image
-          src="/10.png"
+          src="/padel-culture-01.jpg"
           alt="Padel Culture Hero"
           fill
           className="object-cover opacity-70"
@@ -112,7 +112,7 @@ export default function PadelCulturePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="relative aspect-square lg:aspect-auto">
               <Image
-                src="/4.jpg"
+                src="/padel-culture-02.jpg"
                 alt="Partnership"
                 fill
                 className="object-cover opacity-80"
@@ -205,11 +205,11 @@ export default function PadelCulturePage() {
                   customers.
                 </p>
               </div>
-              <div className="mt-8">
+              {/* <div className="mt-8">
                 <span className="inline-flex items-center text-sm font-bold tracking-wide uppercase">
                   Coming Soon
                 </span>
-              </div>
+              </div> */}
             </div>
 
             {/* Brands */}
@@ -223,11 +223,11 @@ export default function PadelCulturePage() {
                   a commitment to quality, performance, and product innovation.
                 </p>
               </div>
-              <div className="mt-8">
+              {/* <div className="mt-8">
                 <span className="inline-flex items-center text-sm font-bold tracking-wide uppercase">
                   Explore Peliga
                 </span>
-              </div>
+              </div> */}
             </div>
 
             {/* Team */}
@@ -267,8 +267,8 @@ export default function PadelCulturePage() {
             </div>
           </div>
         </section>
+        <ContactSection />
       </div>
-      <ContactSection />
     </div>
   );
 }
