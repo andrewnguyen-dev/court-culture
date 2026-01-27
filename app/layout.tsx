@@ -5,6 +5,7 @@ import "./globals.css";
 import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Analytics } from '@vercel/analytics/next';
+import Script from "next/script";
 
 // Add URLs for favicon files stored in the `app` directory
 const iconSvg = new URL("./icon0.svg", import.meta.url).toString();
@@ -130,6 +131,7 @@ export default function RootLayout({
           <Analytics />
         </main>
         <Footer />
+        <Script src="https://web3forms.com/client/script.js" async defer/>
       </body>
     </html>
   );

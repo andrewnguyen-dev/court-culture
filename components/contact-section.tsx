@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {
     const [result, setResult] = useState("");
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
     async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -14,7 +15,7 @@ const ContactSection = () => {
         setResult("Sending...");
         const formData = new FormData(form);
 
-        formData.append("access_key", "30ce2a52-653a-4a64-bdf0-e32eee904e80");
+        formData.append("access_key", accessKey || "");
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -110,6 +111,7 @@ const ContactSection = () => {
                   className="w-full resize-none rounded-lg border border-neutral-200 bg-white px-4 py-3 text-neutral-900 placeholder:text-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black"
                 ></textarea>
               </div>
+              <div className="h-captcha" data-captcha="true"></div>
 
               <div className="space-y-4">
                 <Button type="submit" size="lg" className="w-full">
