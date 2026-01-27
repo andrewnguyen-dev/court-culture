@@ -1,9 +1,36 @@
-import React from "react";
+'use client'
+
+import React, { useState } from "react";
 import Link from "next/link";
 import { BsArrowUpRight, BsWhatsapp } from "react-icons/bs";
 import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {
+    const [result, setResult] = useState("");
+
+    async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+        event.preventDefault();
+        const form = event.currentTarget;
+        setResult("Sending...");
+        const formData = new FormData(form);
+
+        formData.append("access_key", "30ce2a52-653a-4a64-bdf0-e32eee904e80");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            form.reset();
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
+        }
+    }
   return (
     <section className="bg-neutral-800 py-24 mt-24 text-white rounded-lg" id="contact">
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
@@ -39,7 +66,9 @@ const ContactSection = () => {
 
           {/* Right Column: Form */}
           <div className="rounded-lg bg-neutral-50 p-8 md:p-12 text-neutral-900">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <input type="hidden" name="subject" value="New Submission from Court Culture"/>
+              <input type="hidden" name="from_name" value="Court Culture Form"/>
               <div className="space-y-2">
                 <label htmlFor="name" className="font-satoshi text-sm font-medium text-neutral-900 uppercase tracking-wider">
                   Name
@@ -47,6 +76,8 @@ const ContactSection = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
+                  required
                   placeholder="Your name"
                   className="w-full rounded-lg border border-neutral-200 bg-white px-4 py-3 text-neutral-900 placeholder:text-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black"
                 />
@@ -59,6 +90,8 @@ const ContactSection = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  required
                   placeholder="your@email.com"
                   className="w-full rounded-lg border border-neutral-200 bg-white px-4 py-3 text-neutral-900 placeholder:text-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black"
                 />
@@ -70,15 +103,24 @@ const ContactSection = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
+                  required
                   rows={4}
                   placeholder="How can we help?"
                   className="w-full resize-none rounded-lg border border-neutral-200 bg-white px-4 py-3 text-neutral-900 placeholder:text-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black"
                 ></textarea>
               </div>
 
-              <Button type="submit" size="lg" className="w-full">
-                Send Message
-              </Button>
+              <div className="space-y-4">
+                <Button type="submit" size="lg" className="w-full">
+                  Send Message
+                </Button>
+                {result && (
+                  <p className="text-center font-satoshi text-sm font-medium text-neutral-900">
+                    {result}
+                  </p>
+                )}
+              </div>
             </form>
           </div>
         </div>
