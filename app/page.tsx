@@ -4,6 +4,7 @@ import FocusArea from "@/components/focus-area";
 import Hero from "@/components/hero";
 import Mission from "@/components/misson";
 import Multisports from "@/components/multisports";
+import PadelCulture from "@/components/padel-culture";
 
 export const metadata: Metadata = {
   title: "Sports & Recreation Facility Specialists",
@@ -15,6 +16,7 @@ export default function Home() {
     <div className="font-satoshi px-4 sm:px-8 lg:px-12">
       <Hero />
       <Mission />
+      <PadelCulture />
       <FocusArea />
       <AboutUs />
       <Multisports /> 
