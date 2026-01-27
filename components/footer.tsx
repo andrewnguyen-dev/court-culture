@@ -39,7 +39,7 @@ const Footer = () => {
              <div className="flex flex-col gap-4">
                 <h4 className="font-clash-display text-sm font-semibold uppercase text-neutral-500 tracking-wider">Menu</h4>
                 <ul className="space-y-2">
-                    {links.slice(0, 4).map((link) => (
+                    {links.slice(0, 5).map((link) => (
                         <li key={link.name}>
                         <Link 
                             href={link.href} 
@@ -54,7 +54,7 @@ const Footer = () => {
              <div className="flex flex-col gap-4">
                 <h4 className="font-clash-display text-sm font-semibold uppercase text-neutral-500 tracking-wider">Explore</h4>
                 <ul className="space-y-2">
-                     {links.slice(4).map((link) => (
+                     {links.slice(5).map((link) => (
                         <li key={link.name}>
                         <Link 
                             href={link.href} 

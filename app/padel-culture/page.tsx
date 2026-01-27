@@ -59,7 +59,7 @@ export default function PadelCulturePage() {
               <div className="space-y-6 text-lg text-neutral-700">
                 <p>
                   Padel Culture manages the full setup and day-to-day
-                  operations, so you don't have to. We deliver a fully
+                  operations, so you don&apos;t have to. We deliver a fully
                   operational padel venue — allowing you to focus on people,
                   growth, and building a thriving local padel community.
                 </p>
@@ -164,7 +164,7 @@ export default function PadelCulturePage() {
             </h2>
             <p className="max-w-3xl text-xl text-neutral-600">
               Through integrated solutions spanning court construction,
-              equipment, tournaments, and community engagement, we're helping
+              equipment, tournaments, and community engagement, we&apos;re helping
               drive the worldwide growth of padel.
             </p>
           </div>
