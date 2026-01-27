@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import Tape from "./ui/tape";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 export type StatItem = {
   value: string;
@@ -74,7 +76,7 @@ export const statsData: { title: string; items: StatItem[] }[] = [
 const Mission = () => {
   return (
     <section className="pt-24" id="mission">
-      <h1>Mission</h1>
+      <h1 className="homepage-title">Mission</h1>
       <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2">
         <h3 className="sm:mr-16 md:mr-24 lg:mr-48">Turning Spaces into Places for Sport, Wellness & Connection</h3>
         <div className="copy">
@@ -154,8 +156,34 @@ const Mission = () => {
 
 
 
-      <div className="relative aspect-video w-full md:col-span-2">
-        <Image src="/3.jpg" alt="Mission" fill className="object-cover" />
+      <div className="group relative aspect-video w-full overflow-hidden rounded-lg md:col-span-2">
+        {/* Using Padel on the water image as a background context */}
+        <Image
+          src="/10.png"
+          alt="Padel Culture"
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 p-8 md:p-12 lg:p-16">
+          <h2 className="mb-2 font-clash-display text-4xl font-bold uppercase text-white md:text-5xl lg:text-6xl">
+            Padel Culture
+          </h2>
+          <p className="mb-8 max-w-xl text-lg text-white/90 md:text-xl">
+            A specialized subsidiary dedicated to the world&apos;s fastest-growing
+            racquet sport.
+          </p>
+          <Button
+            className="bg-white text-black hover:bg-neutral-200 border-none"
+            size="lg"
+          >
+            <Link
+              href="/padel-culture"
+            >
+              Discover Padel Culture
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );

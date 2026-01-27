@@ -41,7 +41,7 @@ const TeamMember = ({
 const AboutUs = () => {
   return (
     <section className="pt-24" id="about-us">
-      <h1>About Us</h1>
+      <h1 className="homepage-title">About Us</h1>
       <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2">
         <div>
           <AboutUsItem

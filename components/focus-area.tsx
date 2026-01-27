@@ -36,7 +36,7 @@ const FocusItem: React.FC<FocusItemProps> = ({
 const FocusArea = () => {
   return (
     <section className="pt-24" id="focus-area">
-      <h1>Focus Area</h1>
+      <h1 className="homepage-title">Focus Area</h1>
       <p className="copy -mt-8 mb-20 md:-mt-16">
         Backing the founders who are daring to reshape sport.
       </p>

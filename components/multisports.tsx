@@ -40,7 +40,7 @@ const SportList = ({ title, items }: { title: string; items: string[] }) => (
 const Multisports = () => {
   return (
     <section className="pt-24" id="multisports">
-      <h1>Multisports, we do</h1>
+      <h1 className="homepage-title">Multisports, we do</h1>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <div className="pr-04 max-w-prose text-lg md:text-xl font-medium tracking-tight md:pr-12 lg:pr-24 space-y-2">
           <p>
