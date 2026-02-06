@@ -83,9 +83,9 @@ export const metadata: Metadata = {
     locale: "en_AU",
     images: [
       {
-        url: "/logo.png",
-        width: 1182,
-        height: 1182,
+        url: "/og_image.png",
+        width: 1200,
+        height: 630,
         alt: "Court Culture logo",
       },
     ],
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Court Culture",
     description: "We design, build, and operate Sports & Recreation Facilities that transform underused spaces into vibrant destinations for sport, wellness, and community connection.",
-    images: ["/logo.png"],
+    images: ["/og_image.png"],
   },
   robots: {
     index: true,

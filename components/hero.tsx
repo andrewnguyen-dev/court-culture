@@ -19,7 +19,7 @@ const Hero = () => {
         </p>
 
         <div className="mt-8 flex">
-          <Button variant="outline" size="lg" asChild>
+          <Button size="lg" asChild>
             <Link
               href="#contact"
               className="flex items-center"

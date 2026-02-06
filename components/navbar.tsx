@@ -96,10 +96,10 @@ const NavBar = () => {
             {/* Logo */}
             <Link href="/">
               <div className="flex-shrink-0 flex items-center gap-3">
-                <Image src="/logo.png" alt="Logo" width={40} height={40} />
-                <div className="text-xl font-medium font-clash-display text-gray-900 uppercase">
+                <Image src="/logo-horizontal-black.svg" alt="Logo" width={160} height={40} />
+                {/* <div className="text-xl font-medium font-clash-display text-gray-900 uppercase">
                   Court Culture
-                </div>
+                </div> */}
               </div>
             </Link>
 

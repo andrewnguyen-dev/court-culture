@@ -20,13 +20,10 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
           {/* Logo & Brand */}
           <div className="space-y-4 max-w-sm">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="relative h-10 w-10 overflow-hidden rounded-md bg-white">
-                 <Image src="/logo.png" alt="Court Culture Logo" fill className="object-cover p-1" />
+            <Link href="/" className="flex">
+              <div className="relative">
+                 <Image src="/logo-horizontal-white.svg" alt="Court Culture Logo" width={300} height={60} />
               </div>
-              <span className="font-clash-display text-xl font-medium uppercase tracking-wide">
-                Court Culture
-              </span>
             </Link>
             <p className="font-satoshi text-neutral-400 text-sm leading-relaxed">
               Transforming underused spaces into vibrant destinations for sport,
