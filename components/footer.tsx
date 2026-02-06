@@ -71,15 +71,7 @@ const Footer = () => {
           <p className="font-satoshi text-sm text-neutral-500 text-center md:text-left">
             &copy; {currentYear} Court Culture. All rights reserved.
           </p>
-          
-          {/* <div className="flex items-center gap-6">
-             <Link href="#" className="font-satoshi text-sm text-neutral-500 hover:text-white transition-colors">
-                Privacy Policy
-             </Link>
-             <Link href="#" className="font-satoshi text-sm text-neutral-500 hover:text-white transition-colors">
-                Terms of Service
-             </Link>
-          </div> */}
+          <p className="font-satoshi text-sm text-neutral-500">Website by <a href="https://www.drewwebstudio.com.au" className="text-neutral-300 underline underline-offset-2 hover:text-white transition-colors">Drew Web Studio</a></p>
         </div>
       </div>
     </footer>
