@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     const { name, email, message } = await request.json();
 
     const { data, error } = await resend.emails.send({
-      from: "Drew Web Studio <hi@drewwebstudio.com.au>",
+      from: "Court Culture Form Submission <hi@drewwebstudio.com.au>",
       to: [process.env.CONTACT_EMAIL!],
       subject: "New Submission from Court Culture",
       replyTo: email,
