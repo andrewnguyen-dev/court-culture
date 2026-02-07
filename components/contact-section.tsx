@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {
   const [result, setResult] = useState("");
-  const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -15,21 +14,24 @@ const ContactSection = () => {
     setResult("Sending...");
     const formData = new FormData(form);
 
-    formData.append("access_key", accessKey || "");
-
-    const response = await fetch("https://api.web3forms.com/submit", {
+    const response = await fetch("/api/send", {
       method: "POST",
-      body: formData,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: formData.get("name"),
+        email: formData.get("email"),
+        message: formData.get("message"),
+      }),
     });
 
     const data = await response.json();
 
-    if (data.success) {
+    if (response.ok) {
       setResult("Form Submitted Successfully");
       form.reset();
     } else {
       console.log("Error", data);
-      setResult(data.message);
+      setResult(data.error || "Something went wrong");
     }
   }
   
@@ -77,16 +79,6 @@ const ContactSection = () => {
           {/* Right Column: Form */}
           <div className="rounded-lg bg-neutral-50 p-8 text-neutral-900 md:p-12">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <input
-                type="hidden"
-                name="subject"
-                value="New Submission from Court Culture"
-              />
-              <input
-                type="hidden"
-                name="from_name"
-                value="Court Culture Form"
-              />
               <div className="space-y-2">
                 <label
                   htmlFor="name"
@@ -137,8 +129,6 @@ const ContactSection = () => {
                   className="w-full resize-none rounded-lg border border-neutral-200 bg-white px-4 py-3 text-neutral-900 placeholder:text-neutral-400 focus:border-black focus:ring-1 focus:ring-black focus:outline-none"
                 ></textarea>
               </div>
-              <div className="h-captcha" data-captcha="true"></div>
-
               <div className="space-y-4">
                 <Button type="submit" size="lg" className="w-full">
                   Send Message

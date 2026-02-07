@@ -3,7 +3,7 @@ import AboutUs from "@/components/about-us";
 import ContactSection from "@/components/contact-section";
 import FocusArea from "@/components/focus-area";
 import Hero from "@/components/hero";
-import Mission from "@/components/misson";
+import Mission from "@/components/mission";
 import Multisports from "@/components/multisports";
 import PadelCulture from "@/components/padel-culture";
 
