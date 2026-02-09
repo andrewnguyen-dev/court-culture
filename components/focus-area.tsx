@@ -4,7 +4,7 @@ import Image from "next/image";
 
 interface FocusItemProps {
   title: string;
-  descriptions: string[];
+  descriptions: (string | React.ReactNode)[];
   imageSrc: string;
 }
 
@@ -41,9 +41,9 @@ const FocusArea = () => {
         Backing the founders who are daring to reshape sport.
       </p>
       <FocusItem
-        title="Venues"
-        descriptions={["Coming Soon"]}
-        imageSrc="/5.jpg"
+        title="Supporting Other Sports Providers"
+        descriptions={["We assist with finance, design, supply, construction, and operations, acting as a one-stop solution for those exploring new sites or scaling their offerings."]}
+        imageSrc="/11.jpg"
       />
       <FocusItem
         title="Recreational Partner"
@@ -52,6 +52,36 @@ const FocusArea = () => {
           "Our role is to transform under utilised or strategic spaces into thriving destinations for sport, wellness, and community.",
         ]}
         imageSrc="/7.jpg"
+      />
+      <FocusItem
+        title="The Active Community Hub"
+        descriptions={[
+          "Court Culture is actively seeking sites ranging from 2,000 sqm to 15,000 sqm to expand our branded facilities. Within our spaces, we bring together leading sports and wellness brands, creating a “coworking” hub for sport and wellness. Through a diverse range of partner brands, we support and engage local communities, delivering this model across the globe.",
+        ]}
+        imageSrc="/12.jpg"
+      />
+      <FocusItem
+        title="Shaping the Next Generation of Sports Development"
+        descriptions={[
+          <>
+            Court was built on a bold idea: merging esports, real sport,
+            wellness, and cutting-edge technology. Within our ecosystem, players
+            train, compete, and track performance data in one immersive
+            environment. Our stations develop technical, physical, and mental
+            skills, while Hyten promotes well-being, confidence, and social
+            growth. Designed for the next generation of players, Court connects
+            a global community.{" "}
+            <a
+              href="https://www.hyten.life/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 transition-opacity hover:opacity-80"
+            >
+              Join Our Tribe.
+            </a>
+          </>,
+        ]}
+        imageSrc="/13.jpg"
       />
       <FocusItem
         title="International Licensing"

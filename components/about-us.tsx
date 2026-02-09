@@ -54,7 +54,7 @@ const AboutUs = () => {
           />
           <AboutUsItem
             title="Tailor-made Centres"
-            description="Tailored multisport destinations for emerging and specialist sports like pickleball, badminton, and volleyball."
+            description="Tailored multisport destinations for emerging and specialist sports and wellness like padel, pickleball, football,..."
           />
         </div>
         <div className="w-full">

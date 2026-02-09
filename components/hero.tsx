@@ -13,9 +13,9 @@ const Hero = () => {
           COURT CULTURE
         </p>
         <p className="font-satoshi max-w-prose text-lg text-gray-700 md:text-xl">
-          We design, build, and operate Sports & Recreation Facilities that
-          transform underused spaces into vibrant destinations for sport,
-          wellness, and community connection.
+          Court Culture creates and connects immersive sports and
+          wellness spaces, empowering communities, developers,
+          and the next generation of players.
         </p>
 
         <div className="mt-8 flex">

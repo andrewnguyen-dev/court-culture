@@ -81,14 +81,14 @@ const Mission = () => {
         <h3 className="sm:mr-16 md:mr-24 lg:mr-48">Turning Spaces into Places for Sport, Wellness & Connection</h3>
         <div className="copy">
           <p>
-            To create vibrant recreational destinations that bring people
-            together through sport, wellness, and community. We design, build,
-            and operate spaces that transform developments into thriving hubs of
-            activity, driving engagement, foot traffic, and long-term value.
+            Our mission is to create innovative sports and wellness spaces that
+            unite communities, empower players of all levels, support partners and
+            developers, and drive the next generation of athletic, mental, and
+            social growth globally.
           </p>
           <p>
-            The shortage of facilities around Australia ie; basketball,
-            pickleball, badminton - we are solving a massive problem.
+            The shortage of facilities around the world ie; basketball,
+            padel, football, badminton - we are solving a massive problem.
           </p>
         </div>
       </div>
